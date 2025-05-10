@@ -126,12 +126,18 @@ class PageSixValues : public Page
                         getdisplay().setFont(&DSEG7Classic_BoldItalic16pt7b);
                         getdisplay().setCursor(x0+25, y0+70);
                      }
-                    else{
+            // AWA, TWA
+                     else if(DataFormat[ValueIndex] == "formatWind"){
                         getdisplay().setFont(&DSEG7Classic_BoldItalic26pt7b);
-                        if ( DataText[ValueIndex][0] == '-' )
-                            getdisplay().setCursor(x0+25, y0+70);
+                        char FirstChar = DataText[ValueIndex][0];
+                        if ( FirstChar == '-' )
+                            getdisplay().setCursor(x0+23, y0+70);
                         else
                             getdisplay().setCursor(x0+65, y0+70);
+                     }
+                    else{
+                        getdisplay().setFont(&DSEG7Classic_BoldItalic26pt7b);
+                        getdisplay().setCursor(x0+65, y0+70);
                         }
     
             // Show bus data

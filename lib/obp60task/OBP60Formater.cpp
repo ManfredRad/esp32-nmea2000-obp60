@@ -154,7 +154,7 @@ FormatedData formatValue(GwApi::BoatValue *value, CommonData &commondata){
         result.unit = "";
     }
     //########################################################
-    else if (value->getFormat() == "formatCourse" || value->getFormat() == "formatWind"){
+    else if (value->getFormat() == "formatCourse" ){
         double course = 0;
         if(usesimudata == false) {
             course = value->value;
@@ -168,6 +168,30 @@ FormatedData formatValue(GwApi::BoatValue *value, CommonData &commondata){
 
         // Format 3 numbers with prefix zero
         snprintf(buffer,bsize,"%03.0f",course);
+        result.unit = "Deg";
+    }
+       //########################################################
+       else if (value->getFormat() == "formatWind"){
+        double WindAngle = 0;
+        if(usesimudata == false) {
+            WindAngle = value->value;
+            rawvalue = value->value;
+        }
+        else{
+            WindAngle =  2 * M_PI * float(random(0, 1000) / 1000.0);
+         //   WindAngle *= 9.0 / 180.0;     // was used for testing alignment MR
+            rawvalue = WindAngle;
+        }    
+        if ( WindAngle > M_PI)
+            WindAngle -= 2 * M_PI;
+
+        WindAngle *= 180 / M_PI;      // Unit conversion form rad to deg
+
+        // Format 3 numbers with prefix zero
+        if ( WindAngle >= 0 )
+            snprintf(buffer,bsize,"%03.0f",WindAngle);
+        else
+            snprintf(buffer,bsize,"%04.0f",WindAngle);
         result.unit = "Deg";
     }
     //########################################################

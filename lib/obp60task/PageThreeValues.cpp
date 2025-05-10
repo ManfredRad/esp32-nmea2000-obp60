@@ -109,7 +109,15 @@ class PageThreeValues : public Page
             getdisplay().setFont(&Ubuntu_Bold20pt8b);
             getdisplay().setCursor(170, 68);
         }
-        else{
+        else if(bvalue1->getFormat() == "formatWind"){
+            getdisplay().setFont(&DSEG7Classic_BoldItalic30pt7b);
+            char FirstChar = svalue1[0];
+            if ( FirstChar == '-' )
+                getdisplay().setCursor(132, 90);
+            else
+                getdisplay().setCursor(180, 90);
+         }
+ else{
             getdisplay().setFont(&DSEG7Classic_BoldItalic30pt7b);
             getdisplay().setCursor(180, 90);
         }
@@ -157,7 +165,15 @@ class PageThreeValues : public Page
             getdisplay().setFont(&Ubuntu_Bold20pt8b);
             getdisplay().setCursor(170, 158);
         }
-        else{
+        else if(bvalue2->getFormat() == "formatWind"){
+            getdisplay().setFont(&DSEG7Classic_BoldItalic30pt7b);
+            char FirstChar = svalue2[0];
+            if ( FirstChar == '-' )
+                getdisplay().setCursor(132, 180);
+            else
+                getdisplay().setCursor(180, 180);
+         }
+       else{
             getdisplay().setFont(&DSEG7Classic_BoldItalic30pt7b);
             getdisplay().setCursor(180, 180);
         }
@@ -205,7 +221,15 @@ class PageThreeValues : public Page
             getdisplay().setFont(&Ubuntu_Bold20pt8b);
             getdisplay().setCursor(170, 248);
         }
-        else{
+        else if(bvalue3->getFormat() == "formatWind"){
+            getdisplay().setFont(&DSEG7Classic_BoldItalic30pt7b);
+            char FirstChar = svalue3[0];
+            if ( FirstChar == '-' )
+                getdisplay().setCursor(132, 270);
+            else
+                getdisplay().setCursor(180, 270);
+         }
+ else{
             getdisplay().setFont(&DSEG7Classic_BoldItalic30pt7b);
             getdisplay().setCursor(180, 270);
         }

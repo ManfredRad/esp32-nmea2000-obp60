@@ -97,7 +97,15 @@ class PageTwoValues : public Page
         else if(bvalue1->getFormat() == "formatTime" || bvalue1->getFormat() == "formatDate"){
             getdisplay().setFont(&Ubuntu_Bold20pt8b);
             getdisplay().setCursor(170, 105);
-        }
+        }           // AWA, TWA
+         else if(bvalue1->getFormat() == "formatWind"){
+            getdisplay().setFont(&DSEG7Classic_BoldItalic42pt7b);
+            char FirstChar = svalue1[0];
+            if ( FirstChar == '-' )
+                getdisplay().setCursor(113, 130);
+            else
+                getdisplay().setCursor(180, 130);
+         }
         else{
             getdisplay().setFont(&DSEG7Classic_BoldItalic42pt7b);
             getdisplay().setCursor(180, 130);
@@ -146,7 +154,15 @@ class PageTwoValues : public Page
             getdisplay().setFont(&Ubuntu_Bold20pt8b);
             getdisplay().setCursor(170, 215);
         }
-        else{
+        else if(bvalue2->getFormat() == "formatWind"){
+            getdisplay().setFont(&DSEG7Classic_BoldItalic42pt7b);
+            char FirstChar = svalue2[0];
+            if ( FirstChar == '-' )
+                getdisplay().setCursor(113, 240);
+            else
+                getdisplay().setCursor(180, 240);
+         }
+       else{
             getdisplay().setFont(&DSEG7Classic_BoldItalic42pt7b);
             getdisplay().setCursor(180, 240);
         }

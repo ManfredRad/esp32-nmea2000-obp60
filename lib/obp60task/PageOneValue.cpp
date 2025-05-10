@@ -85,6 +85,14 @@ class PageOneValue : public Page
             getdisplay().setFont(&Ubuntu_Bold32pt7b);
             getdisplay().setCursor(20, 200);
         }
+        else if(bvalue1->getFormat() == "formatWind"){
+            getdisplay().setFont(&DSEG7Classic_BoldItalic60pt7b);
+            char FirstChar = svalue1[0];
+            if ( FirstChar == '-' )
+                getdisplay().setCursor(4, 240);
+            else
+                getdisplay().setCursor(100, 240);
+         }
         else{
             getdisplay().setFont(&DSEG7Classic_BoldItalic60pt7b);
             getdisplay().setCursor(20, 240);

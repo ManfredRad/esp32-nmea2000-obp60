@@ -121,7 +121,15 @@ class PageFourValues2 : public Page
             getdisplay().setFont(&Ubuntu_Bold12pt7b);
             getdisplay().setCursor(180, 77);
         }
-        else{
+        else if(bvalue1->getFormat() == "formatWind"){
+            getdisplay().setFont(&DSEG7Classic_BoldItalic30pt7b);
+            char FirstChar = svalue1[0];
+            if ( FirstChar == '-' )
+                getdisplay().setCursor(132, 90);
+            else
+                getdisplay().setCursor(180, 90);
+         }
+else{
             getdisplay().setFont(&DSEG7Classic_BoldItalic30pt7b);
             getdisplay().setCursor(180, 90);
         }
@@ -169,7 +177,15 @@ class PageFourValues2 : public Page
             getdisplay().setFont(&Ubuntu_Bold12pt7b);
             getdisplay().setCursor(180, 158);
         }
-        else{
+        else if(bvalue2->getFormat() == "formatWind"){
+            getdisplay().setFont(&DSEG7Classic_BoldItalic30pt7b);
+            char FirstChar = svalue2[0];
+            if ( FirstChar == '-' )
+                getdisplay().setCursor(132, 180);
+            else
+                getdisplay().setCursor(180, 180);
+         }
+else{
             getdisplay().setFont(&DSEG7Classic_BoldItalic30pt7b);
             getdisplay().setCursor(180, 180);
         }
@@ -217,7 +233,15 @@ class PageFourValues2 : public Page
             getdisplay().setFont(&Ubuntu_Bold8pt7b);
             getdisplay().setCursor(100, 240);
         }
-        else{
+        else if(bvalue3->getFormat() == "formatWind"){
+            getdisplay().setFont(&DSEG7Classic_BoldItalic20pt7b);
+            char FirstChar = svalue3[0];
+            if ( FirstChar == '-' )
+                getdisplay().setCursor(48, 270);
+            else
+                getdisplay().setCursor(80, 270);
+         }
+else{
             getdisplay().setFont(&DSEG7Classic_BoldItalic20pt7b);
             getdisplay().setCursor(80, 270);
         }
@@ -265,7 +289,15 @@ class PageFourValues2 : public Page
             getdisplay().setFont(&Ubuntu_Bold8pt7b);
             getdisplay().setCursor(300, 240);
         }
-        else{
+        else if(bvalue4->getFormat() == "formatWind"){
+            getdisplay().setFont(&DSEG7Classic_BoldItalic20pt7b);
+            char FirstChar = svalue4[0];
+            if ( FirstChar == '-' )
+                getdisplay().setCursor(248, 270);
+            else
+                getdisplay().setCursor(280, 270);
+         }
+else{
             getdisplay().setFont(&DSEG7Classic_BoldItalic20pt7b);
             getdisplay().setCursor(280, 270);
         }
